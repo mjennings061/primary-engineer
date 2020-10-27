@@ -18,6 +18,7 @@
     - Would like to add ability to sense when a car has already passed second sensor and send signal to stop flashing, this would require tracking the number of vehicles etc.
 */
 
+
 // Declare Pins for LED output etc.
 const int LED = 2;
 const int PIR = 0;
