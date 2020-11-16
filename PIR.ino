@@ -35,14 +35,3 @@ void PIR() {
     DEBUG_LED(3, LOW);
   }
 }
-
-void setup() {
-  Serial.begin(9600);
-  pinMode(DEBUG_LED_PIN, OUTPUT);
-  pinMode(PIR_PIN, INPUT);
-}
-
-void loop() {
-  PIR();
-  delay(200);
-}
