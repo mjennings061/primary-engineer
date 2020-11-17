@@ -42,7 +42,7 @@ void setup() {
   pinMode(LED, OUTPUT);
   digitalWrite(LED, 0);
   pinMode(PIR, INPUT);
-  attachInterrupt(digitalPinToInterrupt(PIR), triggered, FALLING);
+  attachInterrupt(digitalPinToInterrupt(PIR), triggered, RISING);
 }
 
 
