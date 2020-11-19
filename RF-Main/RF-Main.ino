@@ -18,6 +18,7 @@
 
 #define LED           7 // Neopixel Data is on Pin D7
 #define PIR           3 // PIR Output is on Pin D3
+#define TIME A3
 
 
 /************ Radio Setup ***************/
@@ -64,6 +65,7 @@ volatile int timer_count = 0;
 volatile int timer_count_2 = 0;
 
 
+int Flash_Time_Coeff;
 
 
 void setup() {
@@ -71,12 +73,18 @@ void setup() {
   while(!Serial){
     ;
   }
+
+  pinMode(TIME, INPUT);
+  Flash_Time_Coeff = analogRead(TIME);
+  Serial.println(Flash_Time_Coeff);
+  
   
   rf69_setup();
   Serial.println("RF Module OK");
 
 
   Timer_2_Setup(); //Timer 2 setup (Timer 2 is not used by anything)
+
   
   // Setup PIR interrupt (PIR will provide a rising edge)
   pinMode(PIR, INPUT);
