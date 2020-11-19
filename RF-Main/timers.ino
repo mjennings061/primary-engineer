@@ -5,7 +5,7 @@
 
 
 void Timer_2_Setup(void){
-  noInterrupts();// We don;t want to be interrupted babay...
+  noInterrupts();// We don't want to be interrupted
 
     //Set timer2 interrupt at ~61Hz
     TCCR2A = 0;// Set entire TCCR1A register to 0
