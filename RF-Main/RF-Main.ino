@@ -128,7 +128,7 @@ ISR(TIMER2_COMPA_vect){
     timer_count++; 
   }
 
-  else if (timer_count_2 < 60){ //0.5 Seconds passed so lets increment our 30 Second counter and reset the 0.5 Second one
+  else if (timer_count_2 < 20){ //0.5 Seconds passed so lets increment our 10 Second counter and reset the 0.5 Second one
     timer_count_2++;
     timer_count = 0;
 
